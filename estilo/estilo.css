@@ -349,4 +349,18 @@ footer #copy-mobile {
     .nav-header ul li {
         padding: 0 5px;
     }
+    .productos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .productos img {
+        height: 250px;
+        width: 200;
+        padding: 10px;
+    }
+    .productos section {
+        height: 400px;
+        width: 100%;
+    }
 }
