@@ -179,6 +179,8 @@ footer #copy-mobile {
 .productos section img {
     height: 300px;
     width: 250px;
+    border-radius: 20px;
+    border: black 2px solid;
 }
 /* Seccion Promociones */
 .main-promos .encabezado {
