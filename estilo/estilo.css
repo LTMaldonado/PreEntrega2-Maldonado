@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;500;700&family=Nunito:wght@200;500;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+/* Header */
+#logo {
+    height: 100px;
+    width: 100px;
+}
+
+.nav-header {  
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    background-color: black;
+    justify-items: center;
+    align-items: center;
+  }
+  
+
+.nav-header .div-header ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    width: 60vw;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+}
+.nav-header .div-header ul li a {
+    text-decoration: none;
+    color: #96E6B3;
+}
+.nav-header .div-header ul li a:hover {
+    color: aliceblue;
+    border: white 2px outset;
+    padding: 5px 15px;
+}
+
+/* Cuerpo de main */
+.contenedor-fluid {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 330px);
+    background-color: #3FDA8F;
+    padding: 0;
+    margin: 0px;
+    justify-items: center;
+    align-items: center;
+  }
+
+.contenedor-fluid img {
+    height: 320px;
+    width: 650px;
+    border: black 3px solid;
+    border-radius: 10px;
+}
+.contenedor-fluid div p {
+    font-size: 35px;
+    color: #3FDA8F;
+    background-color: black;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: 600;
+}
+.contenedor-fluid div {
+    margin: 15px 15px;
+}
+main .textos {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0,1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". ."
+      ". .";
+      background-color: #3FDA8F;
+      justify-items: center;
+      align-items: center;
+      padding: 30px 0 30px 0;
+  }
+
+main .textos p {
+    margin: 30px 55px 10px 55px;
+}
+
+main section .titulo {
+    font-size: 35px;
+    font-weight: 600;
+}
+main section .cuerpo {
+    font-size: 20px;
+    margin: 30px 55px 30px 55px
+
+}
+
+main .instagram-1 {
+    background-color: #3FDA8F;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700;
+    padding: 40px 0 0 0;
+    margin: 0;
+}
+main .instagram {
+    text-align: center;
+    font-size: 25px;
+    background-color: #3FDA8F;
+    margin: 0;
+    padding: 0 0 30px 0;
+}
+
+  
+/* Footer */
+footer {
+    background-color: black;
+    height: 100px;
+    font-weight: 100;
+}
+footer #copy-mobile {
+    visibility: hidden;
+}
+
+.navfoot ul{
+    list-style-type: none;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+}
+
+.navfoot a {
+    text-decoration: none;
+    color: white;
+}
+
+#copy {
+    text-align: center;
+    color: white;
+}
+
+/* Seccion Productos (momentaneamente generica para hombres y mujeres) */
+.productos {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . .";
+      margin: 70px;
+
+  }
+.productos section {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px black solid;
+    margin: 15px;
+    justify-content: center;
+    background-color: #3FDA8F;
+}
+.productos section:hover{
+    height: 450px;
+    background-color: white;
+    border-radius: 20px;
+}
+.productos section img {
+    height: 300px;
+    width: 250px;
+}
+/* Seccion Promociones */
+.main-promos .encabezado {
+    font-size: 50px;
+    margin: 70px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.promociones-1 {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "1 2 3 4"
+      "5 6 7 8";
+    justify-items: center;
+    text-align: center;
+  }
+  
+.main-promos .promociones-1 img {
+    height: 100px;
+    width: 100px;
+}
+.main-promos .promociones-1 section {
+    border: #3FDA8F 2px solid;
+    border-radius: 20px;
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-promos .promociones-1 section:hover {
+    height: 220px;
+    width: 220px;
+}
+.main-promos .promociones-1 section p {
+    margin: 5px;
+}
+.main-promos .club-shanus {
+    padding: 0 40px 40px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-promos .club-shanus .banner-1 {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    height: 320px;
+    border: black 2px solid;
+    border-radius: 20px;
+    align-items: center;
+    padding: 0 15px;
+    flex-wrap: wrap;
+}
+.main-promos .club-shanus .banner-1 .grande{
+    font-size: 30px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+.main-promos .club-shanus .banner-1 .no-grande {
+    font-size: 20px;
+    padding: 0 0 15px 0;
+}
+
+.main-promos .club-shanus .banner-1 img {
+    height: 100px;
+    width: 100px;
+}
+.main-promos .club-shanus img {
+    height: 320px;
+    width: 460px;
+    border: #3FDA8F 3px solid;
+    border-radius: 20px;
+}
+.main-promos .club {
+    color: black;
+    background-color: #3FDA8F;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+    font-size: 30px;
+    margin: 0 40vw 40px 41vw;
+    border: outset 3px #96E6B3;
+    width:250px;
+}
+
+.main-promos .club:hover {
+    color: #3FDA8F;
+    background-color: black;
+    font-size: 35px;
+}
+
+
+/* responsive design */
+@media (max-width: 550px) {
+    main .contenedor-fluid {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+    main .contenedor-fluid img {
+        width: 300px;
+        height: 200px;
+        border: black 3px solid;
+        border-radius: 10px;
+    }
+    main .contenedor-fluid p {
+        font-size: 25px;
+    }
+    main .textos {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+    main .cuerpo {
+        margin: 0;
+    }
+
+    footer{
+        height: 150px;
+    }
+    .navfoot ul {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 50px 50px; 
+        justify-items: center;
+    }
+    .navfoot #copy{
+        visibility: hidden;
+    }
+    footer #copy-mobile {
+        visibility: visible;
+        text-align: center;
+        color: white;
+        padding: 10px 0 10px 0;
+    }
+
+    .nav-header {
+        display: flex;
+        flex-direction: column;
+        height: 209px;
+        justify-content: space-between;
+    }
+    .nav-header ul li {
+        padding: 0 5px;
+    }
+}
