@@ -246,10 +246,9 @@ footer #copy-mobile {
     display: flex;
     flex-direction: column;
     width: 30vw;
-    height: 320px;
-    border: black 2px solid;
-    border-radius: 20px;
-    align-items: center;
+    height: 360px;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 0 15px;
     flex-wrap: wrap;
 }
