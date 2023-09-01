@@ -354,13 +354,57 @@ footer #copy-mobile {
         flex-direction: column;
         align-items: center;
     }
-    .productos img {
+    .productos section img {
         height: 250px;
-        width: 200;
+        width: 200px;
         padding: 10px;
+        border: 0;
     }
     .productos section {
         height: 400px;
         width: 100%;
+    }
+    .promociones-1 {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+    }
+    .main-promos .encabezado {
+        font-size: 30px;
+        margin: 30px;
+        text-align: center;
+        font-weight: 700;
+    }
+    .main-promos .promociones-1 section {
+        height: 200px;
+        width: 200px;
+    }
+    .main-promos .club-shanus {
+        flex-direction: column;
+        width: 100vw;
+        padding: 0;
+    }
+    .main-promos .club-shanus img {
+        height: 100%;
+        width: 100%;
+        margin: 10px 30px;
+        padding: 0;
+    }
+    .main-promos .club {
+        margin: 30px auto;
+        display: block;
+        text-align: center;
+        border-radius: 30px;
+    }
+    .main-promos .club-shanus .banner-1 {
+        flex-direction: column;
+        width: 100vw;
+        height: 100%;
+        border: 0;
+        padding: 0 10px 20px 10px;
+    }
+    .main-promos .club-shanus .banner-1 .grande {
+        font-size: 25px;
     }
 }
