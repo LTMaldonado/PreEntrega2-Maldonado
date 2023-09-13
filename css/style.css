@@ -157,7 +157,8 @@ footer #copy-mobile {
  ". . ."
  ". . ."
  ". . .";
-  margin: 70px; }
+  margin: 70px;
+  padding: 0 50px; }
 
 .productos section {
   height: 400px;
@@ -167,25 +168,34 @@ footer #copy-mobile {
   border: 3px black solid;
   margin: 15px;
   justify-content: center;
-  background-color: #3FDA8F; }
+  width: 400px;}
 
 .productos section:hover {
-  height: 450px;
+  height: 420px;
   background-color: white;
   border-radius: 20px; }
+
+.productos section .descripcionProducto {
+  display: flex;
+  flex-direction: column;
+
+}
 
 .productos section img {
   height: 300px;
   width: 250px;
   border-radius: 20px;
-  border: black 2px solid; }
+  border: black 2px solid;
+  margin: 15px 0; }
 
 /* Seccion Promociones */
 .main-promos .encabezado {
   font-size: 50px;
   margin: 70px;
   text-align: center;
-  font-weight: 700; }
+  font-weight: 700; 
+  position: relative;
+  animation: moverTexto 2s linear;}
 
 .promociones-1 {
   display: grid;
@@ -247,7 +257,9 @@ footer #copy-mobile {
 
 .main-promos .club-shanus .banner-1 img {
   height: 100px;
-  width: 100px; }
+  width: 100px;
+  animation: moverLogo 3s linear infinite;
+  position: relative; }
 
 .main-promos .club-shanus img {
   height: 320px;
@@ -264,12 +276,15 @@ footer #copy-mobile {
   font-size: 30px;
   margin: 0 40vw 40px 41vw;
   border: outset 3px #96E6B3;
-  width: 250px; }
+  width: 250px; 
+  font-weight: 700;
+  border-radius: 10px;}
 
 .main-promos .club:hover {
   color: #3FDA8F;
   background-color: black;
   font-size: 35px; }
+
 /* Animaciones del inicio */
 @keyframes moverInicio {
   0% {
@@ -279,6 +294,52 @@ footer #copy-mobile {
     top: 0;
   }
 }
+@keyframes moverLogo {
+  0% {
+    right: 0;
+  }
+  50%{
+    right: -300px;
+  }
+  100% {
+    right: 0;
+  }
+}
+@keyframes moverLogoResponsive {
+  0% {
+    right: 0;
+  }
+  50%{
+    right: -210px;
+  }
+  100% {
+    right: 0;
+  }
+}
+ @keyframes moverTexto {
+  0% {
+    top: 0;
+  }
+  45% {
+    top: -10px;
+    font-size: 40px;
+  }
+  50% {
+    visibility: hidden;
+  }
+  55% {
+    top: -10px;
+    font-size: 40px;
+  }
+  100% {
+    top: 0;
+  }
+ }
+
+/* formulario */
+  form div #exampleInputPassword1 {
+    height: 200px;
+  }
 
 /* responsive design */
 @media (max-width: 550px) {
@@ -344,7 +405,8 @@ footer #copy-mobile {
     font-size: 30px;
     margin: 30px;
     text-align: center;
-    font-weight: 700; }
+    font-weight: 700;
+    animation: none; }
   .main-promos .promociones-1 section {
     height: 200px;
     width: 200px; }
@@ -357,6 +419,9 @@ footer #copy-mobile {
     width: 100%;
     margin: 10px 30px;
     padding: 0; }
+  .main-promos .club-shanus .banner-1 img{
+    animation: moverLogoResponsive 3s linear infinite;
+  }
   .main-promos .club {
     margin: 30px auto;
     display: block;
