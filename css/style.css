@@ -184,7 +184,6 @@ footer #copy-mobile {
 
 .productos section img {
   height: 300px;
-  width: 250px;
   border-radius: 20px;
   border: black 2px solid;
   margin: 15px 0; }
@@ -338,9 +337,39 @@ footer #copy-mobile {
  }
 
 /* formulario */
-  form div #exampleInputPassword1 {
-    height: 200px;
-  }
+.main-formulario .encontranos p {
+  color: gray;
+  padding: 0px 10px;
+  margin: 5px 0;
+}
+.main-formulario h2 {
+  color: #3FDA8F;
+  font-weight: 700;
+  padding: 30px 0 0 0;
+  font-size: 50px;
+}
+.main-formulario .encontranos {
+  display: flex;
+  justify-content: space-between;
+}
+.main-formulario .encontranos h3{
+  font-size: 20px;
+}
+.main-formulario .encontranos h4{
+  font-size: 20px;
+  margin: 30px 0 0 0;
+}
+.main-formulario .tituloForm {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin: 80px 0 0 0;
+}
+.subton {
+  background-color: #3FDA8F;
+  border: #3FDA8F 1px solid;
+}
+
 
 /* responsive design */
 @media (max-width: 550px) {
