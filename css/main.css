@@ -15,9 +15,7 @@
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   grid-auto-columns: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   justify-items: center;
   align-items: center;
 }
@@ -30,11 +28,12 @@
   justify-content: space-evenly;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .nav-header .div-header ul li a {
   text-decoration: none;
-  color: #96E6B3;
+  color: #3FDA8F;
   font-size: 20px;
 }
 
@@ -59,17 +58,33 @@
 .contenedor-fluid img {
   height: 320px;
   width: 650px;
-  border: black 3px solid;
+  border: rgb(0, 0, 0) 3px solid;
   border-radius: 10px;
+  position: relative;
+  animation: moverInicio 1s linear;
+}
+
+.contenedor-fluid div h1 {
+  font-size: 35px;
+  color: #3FDA8F;
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  padding: 10px;
+  font-weight: 600;
+  position: relative;
+  animation: moverInicio 1s linear;
+  text-align: center;
 }
 
 .contenedor-fluid div p {
   font-size: 35px;
   color: #3FDA8F;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   border-radius: 20px;
   padding: 10px;
   font-weight: 600;
+  position: relative;
+  animation: moverInicio 1s linear;
 }
 
 .contenedor-fluid div {
@@ -81,8 +96,6 @@ main .textos {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0, 1fr 1fr;
   grid-auto-columns: 1fr;
-  grid-auto-flow: row;
-  grid-template-areas: ". ." ". .";
   background-color: #3FDA8F;
   justify-items: center;
   align-items: center;
@@ -134,7 +147,7 @@ main .logo-redes img {
 
 /* Footer */
 footer {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   height: 100px;
   font-weight: 100;
 }
@@ -163,48 +176,33 @@ footer #copy-mobile {
   color: white;
 }
 
-/* Seccion Productos (momentaneamente generica para hombres y mujeres) */
-.productos {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-auto-columns: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas: ". . ." ". . ." ". . ." ". . .";
-  margin: 70px;
+/* Seccion Productos (generica para hombres y mujeres) */
+.prodct img {
+  height: 300px !important;
 }
 
-.productos section {
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 3px black solid;
-  margin: 15px;
-  justify-content: center;
+.verde {
   background-color: #3FDA8F;
+  border: #3FDA8F 2px solid;
 }
 
-.productos section:hover {
-  height: 450px;
-  background-color: white;
-  border-radius: 20px;
-}
-
-.productos section img {
-  height: 300px;
-  width: 250px;
-  border-radius: 20px;
-  border: black 2px solid;
+.verde:hover {
+  background-color: #0b7f47;
+  border: #0b7f47 2px solid;
 }
 
 /* Seccion Promociones */
+.main-promos {
+  background: linear-gradient(to right, #11998e, #38ef7d);
+}
+
 .main-promos .encabezado {
   font-size: 50px;
-  margin: 70px;
+  padding: 70px;
   text-align: center;
   font-weight: 700;
+  position: relative;
+  animation: moverTexto 2s linear;
 }
 
 .promociones-1 {
@@ -224,7 +222,8 @@ footer #copy-mobile {
 }
 
 .main-promos .promociones-1 section {
-  border: #3FDA8F 2px solid;
+  border: rgb(0, 0, 0) 2px solid;
+  background-color: rgb(255, 252, 252);
   border-radius: 20px;
   height: 200px;
   width: 200px;
@@ -276,35 +275,142 @@ footer #copy-mobile {
 .main-promos .club-shanus .banner-1 img {
   height: 100px;
   width: 100px;
+  animation: moverLogo 3s linear infinite;
+  position: relative;
 }
 
 .main-promos .club-shanus img {
   height: 320px;
   width: 460px;
-  border: #3FDA8F 3px solid;
+  border: rgb(0, 0, 0) 3px solid;
   border-radius: 20px;
 }
 
-.main-promos .club {
-  color: black;
+.main-promos .club a {
+  color: rgb(0, 0, 0);
   background-color: #3FDA8F;
-  justify-content: center;
-  display: flex;
   text-decoration: none;
   font-size: 30px;
-  margin: 0 40vw 40px 41vw;
+  padding: 0 5px;
   border: outset 3px #96E6B3;
-  width: 250px;
+  font-weight: 700;
+  border-radius: 10px;
 }
 
-.main-promos .club:hover {
+.main-promos .club {
+  text-align: center;
+  margin: 0;
+  padding: 40px 0;
+}
+
+.main-promos .club a:hover {
   color: #3FDA8F;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   font-size: 35px;
+}
+
+/* Animaciones del inicio */
+@keyframes moverInicio {
+  0% {
+    top: 300px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes moverLogo {
+  0% {
+    right: 0;
+  }
+  50% {
+    right: -300px;
+  }
+  100% {
+    right: 0;
+  }
+}
+@keyframes moverLogoResponsive {
+  0% {
+    right: 0;
+  }
+  50% {
+    right: -210px;
+  }
+  100% {
+    right: 0;
+  }
+}
+@keyframes moverTexto {
+  0% {
+    top: 0;
+  }
+  45% {
+    top: -10px;
+    font-size: 40px;
+  }
+  50% {
+    visibility: hidden;
+  }
+  55% {
+    top: -10px;
+    font-size: 40px;
+  }
+  100% {
+    top: 0;
+  }
+}
+/* formulario */
+.main-formulario .encontranos p {
+  color: gray;
+  padding: 0px 10px;
+  margin: 5px 0;
+}
+
+.main-formulario h2 {
+  color: #3FDA8F;
+  font-weight: 700;
+  padding: 30px 0 0 0;
+  font-size: 50px;
+}
+
+.main-formulario .encontranos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-formulario .encontranos h3 {
+  font-size: 20px;
+}
+
+.main-formulario .encontranos h4 {
+  font-size: 20px;
+  margin: 30px 0 0 0;
+}
+
+.main-formulario .tituloForm {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin: 80px 0 0 0;
+}
+
+.subton {
+  background-color: #3FDA8F;
+  border: #3FDA8F 1px solid;
 }
 
 /* responsive design */
 @media (max-width: 550px) {
+  .main-formulario .encontranos {
+    flex-direction: column;
+  }
+  .main-formulario .encontranos iframe {
+    height: 300px;
+    width: 100%;
+  }
+  .main-formulario .encontranos .ubi {
+    margin-top: 40px;
+  }
   main .contenedor-fluid {
     display: flex;
     flex-direction: column;
@@ -313,7 +419,7 @@ footer #copy-mobile {
   main .contenedor-fluid img {
     width: 300px;
     height: 200px;
-    border: black 3px solid;
+    border: rgb(0, 0, 0) 3px solid;
     border-radius: 10px;
   }
   main .contenedor-fluid p {
@@ -352,8 +458,11 @@ footer #copy-mobile {
   .nav-header {
     display: flex;
     flex-direction: column;
-    height: 209px;
-    justify-content: space-between;
+    height: 220px;
+    justify-content: space-evenly;
+  }
+  header .nav-header #listadou {
+    width: 100vw;
   }
   .nav-header ul li {
     padding: 0 5px;
@@ -362,6 +471,7 @@ footer #copy-mobile {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
   }
   .productos section img {
     height: 250px;
@@ -381,9 +491,10 @@ footer #copy-mobile {
   }
   .main-promos .encabezado {
     font-size: 30px;
-    margin: 30px;
+    padding: 30px;
     text-align: center;
     font-weight: 700;
+    animation: none;
   }
   .main-promos .promociones-1 section {
     height: 200px;
@@ -400,8 +511,10 @@ footer #copy-mobile {
     margin: 10px 30px;
     padding: 0;
   }
+  .main-promos .club-shanus .banner-1 img {
+    animation: moverLogoResponsive 3s linear infinite;
+  }
   .main-promos .club {
-    margin: 30px auto;
     display: block;
     text-align: center;
     border-radius: 30px;
