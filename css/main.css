@@ -48,7 +48,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, 330px);
-  background-color: #3FDA8F;
   padding: 0;
   margin: 0px;
   justify-items: center;
@@ -77,6 +76,7 @@
 }
 
 .contenedor-fluid div p {
+  text-align: center;
   font-size: 35px;
   color: #3FDA8F;
   background-color: rgb(0, 0, 0);
@@ -96,7 +96,6 @@ main .textos {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0, 1fr 1fr;
   grid-auto-columns: 1fr;
-  background-color: #3FDA8F;
   justify-items: center;
   align-items: center;
   padding: 30px 0 30px 0;
@@ -117,7 +116,6 @@ main section .cuerpo {
 }
 
 main .instagram-1 {
-  background-color: #3FDA8F;
   font-size: 40px;
   text-align: center;
   font-weight: 700;
@@ -128,14 +126,12 @@ main .instagram-1 {
 main .instagram {
   text-align: center;
   font-size: 25px;
-  background-color: #3FDA8F;
   margin: 0;
   padding: 0 0 30px 0;
 }
 
 main .logo-redes {
   display: flex;
-  background-color: #3FDA8F;
   justify-content: center;
 }
 
@@ -210,8 +206,6 @@ footer #copy-mobile {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 300px 300px;
   grid-auto-columns: 1fr;
-  grid-auto-flow: row;
-  grid-template-areas: "1 2 3 4" "5 6 7 8";
   justify-items: center;
   text-align: center;
 }
@@ -244,42 +238,35 @@ footer #copy-mobile {
 }
 
 .main-promos .club-shanus {
-  padding: 0 40px 40px 40px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.main-promos .club-shanus .banner-1 {
-  display: flex;
+  justify-content: center;
   flex-direction: column;
-  width: 30vw;
-  height: 360px;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 0 15px;
-  flex-wrap: wrap;
+  width: 50vw;
+  margin: auto;
 }
 
-.main-promos .club-shanus .banner-1 .grande {
+.main-promos .club-shanus .grande {
   font-size: 30px;
   font-weight: 600;
   padding: 10px 0;
+  text-align: center;
 }
 
-.main-promos .club-shanus .banner-1 .no-grande {
+.main-promos .club-shanus .no-grande {
   font-size: 20px;
   padding: 0 0 15px 0;
+  width: 70%;
+  margin: auto;
+  text-align: center;
 }
 
-.main-promos .club-shanus .banner-1 img {
-  height: 100px;
-  width: 100px;
-  animation: moverLogo 3s linear infinite;
-  position: relative;
+.main-promos .club-img {
+  display: flex;
+  justify-content: space-around;
 }
 
-.main-promos .club-shanus img {
+.main-promos .club-img img {
+  margin-top: 40px;
   height: 320px;
   width: 460px;
   border: rgb(0, 0, 0) 3px solid;
@@ -316,28 +303,6 @@ footer #copy-mobile {
   }
   100% {
     top: 0;
-  }
-}
-@keyframes moverLogo {
-  0% {
-    right: 0;
-  }
-  50% {
-    right: -300px;
-  }
-  100% {
-    right: 0;
-  }
-}
-@keyframes moverLogoResponsive {
-  0% {
-    right: 0;
-  }
-  50% {
-    right: -210px;
-  }
-  100% {
-    right: 0;
   }
 }
 @keyframes moverTexto {
@@ -399,8 +364,41 @@ footer #copy-mobile {
   border: #3FDA8F 1px solid;
 }
 
+#coloreado {
+  background: linear-gradient(to right, #11998e, #38ef7d);
+}
+
 /* responsive design */
-@media (max-width: 550px) {
+@media (max-width: 999px) {
+  main .contenedor-fluid {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: auto;
+  }
+  main .contenedor-fluid img {
+    margin-top: 90px;
+    width: 100%;
+  }
+  .main-formulario .encontranos {
+    flex-direction: column;
+  }
+  .main-formulario .encontranos .ubi {
+    margin-top: 80px;
+  }
+  .main-formulario .encontranos .ubi iframe {
+    margin: auto;
+  }
+  .main-promos .club-img {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-promos .promociones-1 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 576px) {
   .main-formulario .encontranos {
     flex-direction: column;
   }
@@ -505,14 +503,11 @@ footer #copy-mobile {
     width: 100vw;
     padding: 0;
   }
-  .main-promos .club-shanus img {
+  .main-promos .club-img img {
     height: 100%;
     width: 100%;
     margin: 10px 30px;
     padding: 0;
-  }
-  .main-promos .club-shanus .banner-1 img {
-    animation: moverLogoResponsive 3s linear infinite;
   }
   .main-promos .club {
     display: block;
